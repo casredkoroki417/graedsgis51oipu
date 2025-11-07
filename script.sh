@@ -27,5 +27,7 @@ echo "-----------------------------------"
 # Pull and run the container with your preferred flags
 docker pull "$SELECTED_IMAGE"
 docker run --rm \
+-e MIN_SLEEP_MINUTES=1 \
+-e MAX_SLEEP_MINUTES=2 \
   -i --shm-size 4g \
   "$SELECTED_IMAGE"
